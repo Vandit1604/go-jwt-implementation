@@ -46,6 +46,7 @@ func SignIn(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// verify the user by checking password
 	expectedPassword, ok := users[credentials.Username]
 	if !ok || expectedPassword != credentials.Password {
 		w.WriteHeader(http.StatusUnauthorized)
