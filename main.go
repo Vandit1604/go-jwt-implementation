@@ -9,6 +9,8 @@ import (
 	"github.com/golang-jwt/jwt/v5"
 )
 
+// HEADER | PAYLOAD | SIGNATURE
+
 var jwtKey = []byte("secret")
 
 func main() {
